@@ -31,13 +31,13 @@ export default function StockControls({ id, refresh }) {
       />
       <button
         onClick={handleIn}
-        className="bg-[var(--olive)] text-white"
+        className="bg-[var(--olive)] text-white hover:cursor-pointer hover:bg-green-800"
       >
         +
       </button>
       <button
         onClick={handleOut}
-        className="bg-[var(--danger)] text-white"
+        className="bg-[var(--danger)] text-white hover:cursor-pointer hover:bg-red-800"
       >
         -
       </button>
