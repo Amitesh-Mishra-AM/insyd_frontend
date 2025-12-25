@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inventory Control – Frontend
 
-## Getting Started
+This repository contains the **frontend** for the Inventory Control system.  
+The application provides a simple interface to manage inventory items, track stock levels, and handle low-stock alerts.
 
-First, run the development server:
+The frontend is built using **Next.js** and communicates with a REST API backend.
+
+---
+
+## 🚀 Live Links
+- **Frontend Link:** https://insyd-frontend-wine.vercel.app/
+- **Base URL:** https://insyd-backend-3gfc.onrender.com/
+- **Frontend Repo (This Repo):** https://github.com/Amitesh-Mishra-AM/insyd_frontend
+- **Backend Repo:** https://github.com/Amitesh-Mishra-AM/Insyd-Backend
+---
+
+## 🧱 Tech Stack
+
+- **Framework:** Next.js (Pages Router)
+- **Styling:** Tailwind CSS v4
+- **State Management:** React Hooks
+- **Deployment:** Vercel
+
+---
+
+## ✨ Features
+
+- View all inventory items
+- Add new inventory items
+- Increase / decrease stock quantity
+- Update low-stock threshold dynamically
+- Visual low-stock status indication
+- Delete inventory items
+
+---
+
+## 📁 Project Structure
+```
+inventory-frontend/
+├── pages/
+│ ├── index.js # Inventory dashboard
+│ ├── add.js # Add item page
+│ └── _app.js # Global app setup
+├── components/
+│ ├── InventoryTable.js
+│ ├── StockControls.js
+│ └── ThresholdControl.js
+├── services/
+│ └── api.js # API calls
+├── styles/
+│ └── globals.css
+└── tailwind.config.js
+```
+---
+## 🔌 Environment Variables
+
+Create a `.env.local` file in the root directory:
+```
+NEXT_PUBLIC_API_URL=https://insyd-backend-3gfc.onrender.com/
+```
+This variable is required for connecting to the backend API.
+---
+## ▶️ Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+App will be available at:
+```
+http://localhost:3000
+```
+---
+## 🧠 Design Decisions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Pages Router was chosen for simplicity and stability.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Styling is intentionally minimal to focus on functionality.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Backend communication is isolated in a single service file.
 
-## Learn More
+- UI is designed as an internal tool rather than a consumer product.
+---
+## 📌 Possible Improvements
 
-To learn more about Next.js, take a look at the following resources:
+- Authentication & role-based access
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Pagination and search
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Inventory analytics
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Bulk operations
+---
